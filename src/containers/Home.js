@@ -4,7 +4,7 @@ import { withSiteData } from 'react-static'
 import logoImg from '../../public/stub-landing.png'
 
 export default withSiteData(() => (
-  <div style={{background: logoImg }}>
+  <div>
     <img src={logoImg} alt="" />
   </div>
 ))
