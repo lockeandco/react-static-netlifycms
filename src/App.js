@@ -7,11 +7,13 @@ import Routes from 'react-static-routes'
 import './app.css'
 
 const App = () => (
-
-  <React.Fragment>
-      <div className="content"/>
-  </React.Fragment>
-
+  <Router>
+    <div>
+      <div className="content">
+        <Routes />
+      </div>
+    </div>
+  </Router>
 )
 
 export default hot(module)(App)
