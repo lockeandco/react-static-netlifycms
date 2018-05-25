@@ -1,7 +1,7 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 //
-import logoImg from '../logo.png'
+import logoImg from '../../public/stub-landing.png'
 
 export default withSiteData(() => (
   <div>
