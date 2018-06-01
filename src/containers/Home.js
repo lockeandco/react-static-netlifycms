@@ -28,7 +28,18 @@ import logoImg from '../../public/landing-image.png'
  */
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-    <Image src={logoImg} size="massive" />
+    <Segment
+      basic
+      style={{
+    textAlign: 'center',
+    marginTop: 0,
+    minHeight: 500,
+    backgroundImage: `url(${logoImg}`,
+    backgroundSize: 'cover',
+  }}
+      attached
+/>
+
     <Divider hidden />
     <Button primary size="huge">
       Get Started
