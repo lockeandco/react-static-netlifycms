@@ -27,8 +27,18 @@ import logoImg from '../../public/landing-image.png'
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
-
+  <Container>
+    <Segment
+      basic
+      style={{
+    textAlign: 'center',
+    marginTop: 0,
+    minHeight: 500,
+    backgroundImage: `url(${logoImg}`,
+    backgroundSize: 'cover',
+  }}
+      attached
+/>
 
     <Divider hidden />
     <Button primary size="huge">
@@ -160,17 +170,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment
-      basic
-      style={{
-        textAlign: 'center',
-        marginTop: 0,
-        minHeight: 500,
-        backgroundImage: `url(${logoImg}`,
-        backgroundSize: 'cover',
-      }}
-      attached
-/>
+
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
