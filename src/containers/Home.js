@@ -22,15 +22,45 @@ import {
 
 import logoImg from '../../public/landing-image.png'
 
-/* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
 
-const HomepageLayout = () => (
-  <Container>
-<Image src={logoImg} size="massive" />
-  </Container>
-)
+export default class HomepageLayoutextends Component {
+  state = { modalOpen: true}
+
+  handleOpen = () => this.setState({ modalOpen: true })
+
+  handleClose = () => this.setState({ modalOpen: false })
+
+  render() {
+    return (
+      
+      <Grid container textAlign='center'>
+      <Image src={logoImg} size="massive" />
+
+      <Modal
+        open={this.state.modalOpen}
+        onClose={this.handleClose}
+        basic
+        size='small'
+        dimmer="blurring"
+        closeOnDimmerClick={false}
+        closeOnDocumentClick={false}
+      >
+        <Header icon='browser' content='Age Verification' />
+        <Modal.Content>
+          <h3>Are you at least 21 years of age?</h3>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button color='red' onClick={this.handleClose} inverted>
+            <Icon name='cancel' /> Yes
+          </Button>
+          <Button color='green' onClick={this.handleClose} inverted>
+          <Icon name='checkmark' /> Yes
+        </Button>
+        </Modal.Actions>
+      </Modal>
+      </Grid>ß
+    )
+  }
+}
+
 export default withSiteData(HomepageLayout)
-
