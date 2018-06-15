@@ -63,7 +63,7 @@ class HomepageLayout extends Component {
           <img src={logoImg} size="massive" />  
         </Grid.Column>
    
-      </Grid>
+      </Grid>,
       <Modal trigger={<Button>Basic Modal</Button>} basic size='small'>
       <Header icon='archive' content='Archive Old Messages' />
       <Modal.Content>
