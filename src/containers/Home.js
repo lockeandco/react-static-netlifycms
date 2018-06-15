@@ -32,39 +32,38 @@ class HomepageLayout extends Component {
   handleClose = () => this.setState({ modalOpen: false })
 
   render () {
-    return (
+    return [
+      <Modal
+      open={this.state.modalOpen}
+      onClose={this.handleClose}
+      basic
+      size="small"
+      dimmer="blurring"
+      closeOnDimmerClick={false}
+      closeOnDocumentClick={false}
+      centered
+  >
+      <Header icon="beer" content="Age Verification" />
+      <Modal.Content>
+        <h3>Are you at least 21 years of age?</h3>
+      </Modal.Content>
+      <Modal.Actions>
+        <Button color="red" onClick={this.handleClose} inverted>
+        <Icon name="cancel" /> No
+      </Button>
+        <Button color="green" onClick={this.handleClose} inverted>
+        <Icon name="checkmark" /> Yes
+      </Button>
+      </Modal.Actions>
+    </Modal>,
 
-      <Grid container centered textAlign="center" columns={1}>
-        <Grid.Column>
-          <img src={logoImg} size="massive" />
+      <Grid container centered textAlign="center" columns={1} stretched vertical>
+        <Grid.Column centered>
+          <img src={logoImg}  />
         </Grid.Column>
-        <Grid.Column>
-              <Modal
-          open={this.state.modalOpen}
-          onClose={this.handleClose}
-          basic
-          size="small"
-          dimmer="blurring"
-          closeOnDimmerClick={false}
-          closeOnDocumentClick={false}
-          centered
-      >
-          <Header icon="beer" content="Age Verification" />
-          <Modal.Content>
-            <h3>Are you at least 21 years of age?</h3>
-          </Modal.Content>
-          <Modal.Actions>
-            <Button color="red" onClick={this.handleClose} inverted>
-            <Icon name="cancel" /> No
-          </Button>
-            <Button color="green" onClick={this.handleClose} inverted>
-            <Icon name="checkmark" /> Yes
-          </Button>
-          </Modal.Actions>
-        </Modal>
-            </Grid.Column>
+   
       </Grid>
-    )
+    ]
   }
 }
 
