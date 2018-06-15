@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'oldGrowth';
+  src: url('OldGrowth-Regular.otf');
+}
+
 body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
     'Lucida Grande', sans-serif;
@@ -43,7 +48,3 @@ nav a {
  flex-direction: column;
 }
 
-@font-face {
-  font-family: oldGrowth;
-  src: url('OldGrowth-Regular.otf');
-}
