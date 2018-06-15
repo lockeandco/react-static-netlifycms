@@ -35,7 +35,7 @@ const HomepageLayout = () => (
     textAlign: 'center',
     marginTop: 0,
     minHeight: 500,
-    backgroundImage: `url(${logoImg}`,
+    backgroundImage: `url(${logoImg})`,
     backgroundSize: 'cover',
   }}
       attached
