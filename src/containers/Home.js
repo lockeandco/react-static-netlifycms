@@ -34,9 +34,10 @@ class HomepageLayout extends Component {
   render () {
     return (
 
-      <Grid container textAlign="center">
+      <Grid container centered textAlign="center">
+      <Grid.Column>
         <img src={logoImg} size="massive" />
-
+<Grid.Column>
         <Modal
         open={this.state.modalOpen}
         onClose={this.handleClose}
