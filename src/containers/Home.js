@@ -34,7 +34,7 @@ class HomepageLayout extends Component {
   render () {
     return (
 
-      <Grid container centered textAlign="center">
+      <Grid container centered textAlign="center" columns={1}>
         <Grid.Column>
           <img src={logoImg} size="massive" />
         </Grid.Column>
