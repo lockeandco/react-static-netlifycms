@@ -60,10 +60,26 @@ class HomepageLayout extends Component {
 
       <Grid container centered textAlign="center" columns={1} stretched vertical>
         <Grid.Column centered>
-          <img src={logoImg}  />  
+          <img src={logoImg} size="massive" />  
         </Grid.Column>
    
       </Grid>
+      <Modal trigger={<Button>Basic Modal</Button>} basic size='small'>
+      <Header icon='archive' content='Archive Old Messages' />
+      <Modal.Content>
+        <p>
+          Your inbox is getting full, would you like us to enable automatic archiving of old messages?
+        </p>
+      </Modal.Content>
+      <Modal.Actions>
+        <Button basic color='red' inverted>
+          <Icon name='remove' /> No
+        </Button>
+        <Button color='green' inverted>
+          <Icon name='checkmark' /> Yes
+        </Button>
+      </Modal.Actions>
+    </Modal>
     ]
   }
 }
