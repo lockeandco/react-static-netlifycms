@@ -29,18 +29,7 @@ import logoImg from '../../public/landing-image.png'
 
 const HomepageLayout = () => (
   <Container fluid>
-   <Segment
-      basic
-      style={{
-    textAlign: 'center',
-    marginTop: 0,
-    minHeight: 500,
-    backgroundImage: `url(${logoImg})`,
-    backgroundSize: 'cover',
-  }}
-      attached
-
-/>
+<Image src={logoImg} size="massive" />
   </Container>
 )
 export default withSiteData(HomepageLayout)
