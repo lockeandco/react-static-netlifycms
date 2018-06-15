@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'oldGrowth';
-  src: url('OldGrowth-Regular.otf');
+  src: url('/static/OldGrowth-Regular.otf');
 }
 
 body {
