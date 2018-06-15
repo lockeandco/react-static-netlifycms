@@ -35,24 +35,24 @@ class HomepageLayout extends Component {
     return (
 
       <Grid container centered textAlign="center">
-      <Grid.Column>
+        <Grid.Column>
         <img src={logoImg} size="massive" />
-<Grid.Column>
+            </Grid.Column>
         <Modal
-        open={this.state.modalOpen}
-        onClose={this.handleClose}
-        basic
-        size="small"
-        dimmer="blurring"
-        closeOnDimmerClick={false}
-        closeOnDocumentClick={false}
-        centered
+          open={this.state.modalOpen}
+          onClose={this.handleClose}
+          basic
+          size="small"
+          dimmer="blurring"
+          closeOnDimmerClick={false}
+          closeOnDocumentClick={false}
+          centered
       >
-        <Header icon="beer" content="Age Verification" />
-        <Modal.Content>
+          <Header icon="beer" content="Age Verification" />
+          <Modal.Content>
           <h3>Are you at least 21 years of age?</h3>
         </Modal.Content>
-        <Modal.Actions>
+          <Modal.Actions>
           <Button color="red" onClick={this.handleClose} inverted>
             <Icon name="cancel" /> No
           </Button>
@@ -60,7 +60,7 @@ class HomepageLayout extends Component {
             <Icon name="checkmark" /> Yes
           </Button>
         </Modal.Actions>
-      </Modal>
+        </Modal>
       </Grid>
     )
   }
