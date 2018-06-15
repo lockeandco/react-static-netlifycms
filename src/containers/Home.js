@@ -58,7 +58,7 @@ export default class HomepageLayoutextends Component {
         </Button>
         </Modal.Actions>
       </Modal>
-      </Grid>ß
+      </Grid>
     )
   }
 }
