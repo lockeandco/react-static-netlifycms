@@ -36,9 +36,10 @@ class HomepageLayout extends Component {
 
       <Grid container centered textAlign="center">
         <Grid.Column>
-        <img src={logoImg} size="massive" />
-            </Grid.Column>
-        <Modal
+          <img src={logoImg} size="massive" />
+        </Grid.Column>
+        <Grid.Column>
+              <Modal
           open={this.state.modalOpen}
           onClose={this.handleClose}
           basic
@@ -50,17 +51,18 @@ class HomepageLayout extends Component {
       >
           <Header icon="beer" content="Age Verification" />
           <Modal.Content>
-          <h3>Are you at least 21 years of age?</h3>
-        </Modal.Content>
+            <h3>Are you at least 21 years of age?</h3>
+          </Modal.Content>
           <Modal.Actions>
-          <Button color="red" onClick={this.handleClose} inverted>
+            <Button color="red" onClick={this.handleClose} inverted>
             <Icon name="cancel" /> No
           </Button>
-          <Button color="green" onClick={this.handleClose} inverted>
+            <Button color="green" onClick={this.handleClose} inverted>
             <Icon name="checkmark" /> Yes
           </Button>
-        </Modal.Actions>
+          </Modal.Actions>
         </Modal>
+            </Grid.Column>
       </Grid>
     )
   }
