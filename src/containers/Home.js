@@ -83,7 +83,7 @@ class HomepageLayout extends Component {
             <Segment style={{
            
 width: 400,
- left: (typeof window !== 'undefined) ? (window.innerWidth/2) - 200 : '30%',
+ left: (typeof window !== 'undefined') ? (window.innerWidth/2) - 200 : '30%',
 position: 'fixed',
 top: '40%',
 zIndex: 1000,
