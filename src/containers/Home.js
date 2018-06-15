@@ -28,12 +28,12 @@ import logoImg from '../../public/landing-image.png'
  */
 
 const HomepageLayout = () => (
-  <Container text>
+  <Container>
    <Segment
       basic
       style={{
     textAlign: 'center',
-    marginTop: 0,
+    marginTop: 10,
     minHeight: 500,
     backgroundImage: `url(${logoImg})`,
     backgroundSize: 'cover',
