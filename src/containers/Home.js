@@ -40,7 +40,6 @@ class HomepageLayout extends Component {
   handleNo = () => window.location.assign('https://www.responsibility.org/')
 
   render () {
-    console.log(screen.height, screen.width)
 
     return [
 
