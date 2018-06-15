@@ -42,3 +42,8 @@ nav a {
  display: flex;
  flex-direction: column;
 }
+
+@font-face {
+  font-family: oldGrowth;
+  src: url('OldGrowth-Regular.otf');
+}
