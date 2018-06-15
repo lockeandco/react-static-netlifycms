@@ -36,7 +36,7 @@ class HomepageLayout extends Component {
       <Modal
       open={this.state.modalOpen}
       onClose={this.handleClose}
-      basic
+      
       size="small"
       dimmer="blurring"
       closeOnDimmerClick={false}
