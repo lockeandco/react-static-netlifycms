@@ -28,7 +28,7 @@ import logoImg from '../../public/landing-image.png'
  */
 
 const HomepageLayout = () => (
-  <Container fluid>
+  <Container>
 <Image src={logoImg} size="massive" />
   </Container>
 )
