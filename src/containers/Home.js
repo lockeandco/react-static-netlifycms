@@ -35,7 +35,7 @@ class HomepageLayout extends Component {
     return (
 
       <Grid container textAlign="center">
-        <Image src={logoImg} size="massive" />
+        <img src={logoImg} size="massive" />
 
         <Modal
         open={this.state.modalOpen}
@@ -45,6 +45,7 @@ class HomepageLayout extends Component {
         dimmer="blurring"
         closeOnDimmerClick={false}
         closeOnDocumentClick={false}
+        centered
       >
         <Header icon="beer" content="Age Verification" />
         <Modal.Content>
@@ -52,7 +53,7 @@ class HomepageLayout extends Component {
         </Modal.Content>
         <Modal.Actions>
           <Button color="red" onClick={this.handleClose} inverted>
-            <Icon name="cancel" /> Yes
+            <Icon name="cancel" /> No
           </Button>
           <Button color="green" onClick={this.handleClose} inverted>
             <Icon name="checkmark" /> Yes
