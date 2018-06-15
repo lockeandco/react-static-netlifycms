@@ -7,20 +7,9 @@ body {
   font-family: 'oldGrowth';
   font-weight: 300;
   font-size: 16px;
-  margin: 0;
-  padding: 0;
   background: #E2DED5;
 }
 
-a {
-  text-decoration: none;
-  color: #108db8;
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
 
 nav {
   width: 100%;

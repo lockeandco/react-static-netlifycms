@@ -42,6 +42,7 @@ class HomepageLayout extends Component {
       closeOnDimmerClick={false}
       closeOnDocumentClick={false}
       centered
+      closeOnEscape={false}
   >
       <Header icon="beer" content="Age Verification" />
       <Modal.Content>
@@ -59,7 +60,7 @@ class HomepageLayout extends Component {
 
       <Grid container centered textAlign="center" columns={1} stretched vertical>
         <Grid.Column centered>
-          <img src={logoImg}  />
+          <img src={logoImg}  />  
         </Grid.Column>
    
       </Grid>
