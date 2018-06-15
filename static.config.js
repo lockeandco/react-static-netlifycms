@@ -1,7 +1,10 @@
+import React, { Component } from 'react'
+
 const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
+
 
 function getPosts () {
   const items = []
@@ -77,4 +80,16 @@ export default {
       },
     ]
   },
+  Document: ({
+ Html, Head, Body, children, siteData, renderMeta 
+}) => (
+    <Html lang="en-US">
+      <Head>
+        <meta charSet="UTF-8" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
 }
