@@ -85,8 +85,8 @@ class HomepageLayout extends Component {
       >
             <Segment style={{
 
-width: (typeof window !== 'undefined') && window.innerWidth > 400 ? 400 : window.innerWidth * 0.90,
- left: (typeof window !== 'undefined') && window.innerWidth > 400 ? (window.innerWidth/2) - 200 : (window.innerWidth/2) - ((window.innerWidth *0.90) /2),
+width: (typeof window !== 'undefined') && window.innerWidth > 400 ? 400 : (typeof window !== 'undefined') ? window.innerWidth * 0.90 : 400,
+ left: (typeof window !== 'undefined') && window.innerWidth > 400 ? (window.innerWidth/2) - 200 : (typeof window !== 'undefined') ? (window.innerWidth/2) - ((window.innerWidth *0.90) /2) : '10%',
 position: 'fixed',
 top: (typeof window !== 'undefined') && window.innerWidth > 600 ? (window.innerHeight) * 0.20 : '5%',
 zIndex: 1000,
