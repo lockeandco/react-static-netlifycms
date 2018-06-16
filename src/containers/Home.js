@@ -40,13 +40,16 @@ class HomepageLayout extends Component {
   handleNo = () => window.location.assign('https://www.responsibility.org/')
 
   render () {
-
     return [
 
 
-      <Grid key={2} container centered textAlign="center" columns={1}>
+      <Grid key={2} centered textAlign="center" columns={1}>
         <Grid.Column >
-          <img src={logoImg} size="massive" />
+
+
+          <img src={logoImg} />
+
+
         </Grid.Column>
         <Grid.Column>
           <Modal
@@ -81,27 +84,32 @@ class HomepageLayout extends Component {
             onClose={this.handlePortalClose} open={this.state.portalOpen}
       >
             <Segment style={{
-           
-width: 400,
- left: (typeof window !== 'undefined') ? (window.innerWidth/2) - 200 : '30%',
+
+width: (typeof window !== 'undefined') && window.innerWidth > 400 ? 400 : window.innerWidth * 0.90,
+ left: (typeof window !== 'undefined') && window.innerWidth > 400 ? (window.innerWidth/2) - 200 : (window.innerWidth/2) - ((window.innerWidth *0.90) /2),
 position: 'fixed',
-top: '40%',
+top: (typeof window !== 'undefined') && window.innerWidth > 600 ? (window.innerHeight) * 0.20 : '5%',
 zIndex: 1000,
-padding: '5 5 5 5'
+padding: '5 5 5 5',
 }}>
-              <p style={{color: '#243746' }}>stay in touch</p>
+              <Icon style={{ float: 'right', margin: '5 5 5 5 ' }} name="cancel" size="large" onClick={this.handlePortalClose} />
+              <p style={{ color: '#243746' }}>stay in touch</p>
               <span style={{ fontFamily: 'Arial', color: '#243746' }}>
                 <p>Subscribe to our mailing list for important annoucements,
                 upcoming events, and random musings.
-              </p>
+                </p>
               </span>
-              <Icon style={{align: 'center'}} name="pointing down" size="big"  circular  />
+              <div style={{ textAlign: 'center' }}>
+                <Icon style={{ align: 'center' }} name="pointing down" size="big" circular />
+              </div>
             </Segment>
-  
+
           </TransitionablePortal>
         </Grid.Column>
-        <GridColumn textAlign="center">
+        <GridColumn textAlign="center" >
+        <Segment basic padded style={{ padding: '20px 20px 100px 20px'}}>
           <CustomForm />
+          </Segment>
         </GridColumn>
 
       </Grid>,
