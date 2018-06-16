@@ -9,7 +9,14 @@ import './app.css'
 const App = () => (
   <Router>
     <div>
-      <div className="content">
+      <div className="content" style={{
+        fontFamily: 'oldGrowth',
+        fontWeight: 300,
+        fontSize: '16px',
+        margin: 0,
+        padding: 0,
+        background: '#e2ded5'
+    }}>
         <Routes />
       </div>
     </div>
