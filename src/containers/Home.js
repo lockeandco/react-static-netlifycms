@@ -93,7 +93,7 @@ zIndex: 1000,
 padding: '5 5 5 5',
 }}>
               <Icon style={{ float: 'right', margin: '5 5 5 5 ' }} name="cancel" size="large" onClick={this.handlePortalClose} />
-              <p style={{ color: '#243746' }}>stay in touch</p>
+              <p style={{ color: '#243746' , fontFamily: 'oldGrowth' }}>stay in touch</p>
               <span style={{ fontFamily: 'Arial', color: '#243746' }}>
                 <p>Subscribe to our mailing list for important annoucements,
                 upcoming events, and random musings.
