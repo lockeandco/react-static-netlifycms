@@ -23,7 +23,7 @@ import {
 } from 'semantic-ui-react'
 
 import logoImg from '../../public/landing-image.png'
-
+import '../../src/app.css'
 
 class HomepageLayout extends Component {
   state = { modalOpen: true, portalOpen: false }
