@@ -20,6 +20,8 @@ import {
   Modal,
   TransitionablePortal,
   GridColumn,
+  Card,
+  Transition,
 } from 'semantic-ui-react'
 
 import logoImg from '../../public/landing-image.png'
@@ -44,6 +46,7 @@ class HomepageLayout extends Component {
 
 
       <Grid key={2} centered textAlign="center" columns={1}>
+      <Grid.Row>
         <Grid.Column >
 
 
@@ -76,42 +79,50 @@ class HomepageLayout extends Component {
               </Button>
             </Modal.Actions>
           </Modal>
-          <TransitionablePortal
-            transition={{
-            animation: 'fly down',
-            duration: 1800,
-          }}
-            onClose={this.handlePortalClose} open={this.state.portalOpen}
-      >
-            <Segment style={{
 
-width: (typeof window !== 'undefined') && window.innerWidth > 400 ? 400 : (typeof window !== 'undefined') ? window.innerWidth * 0.90 : 400,
- left: (typeof window !== 'undefined') && window.innerWidth > 400 ? (window.innerWidth/2) - 200 : (typeof window !== 'undefined') ? (window.innerWidth/2) - ((window.innerWidth *0.90) /2) : '10%',
-position: 'fixed',
-top: (typeof window !== 'undefined') && window.innerWidth > 600 ? (window.innerHeight) * 0.20 : '5%',
+        </Grid.Column>
+        <GridColumn textAlign="center" >
+          <Segment basic padded style={{ padding: '20px 20px 10px 20px' }}>
+
+            <CustomForm />
+          </Segment>
+
+        </GridColumn>
+        <GridColumn style={{width: (typeof window !== 'undefined') && window.innerWidth > 400 ? 400 : (typeof window !== 'undefined') ? window.innerWidth * 0.90 : 400 }}>
+        <div>
+          <Transition
+            animation="fly down"
+            duration={1800}
+            onClose={this.handlePortalClose}
+            visible={this.state.portalOpen}
+    >
+            <Segment
+            size={'tiny'}
+            style={{
+
+
+// left: (typeof window !== 'undefined') && window.innerWidth > 400 ? (window.innerWidth/2) - 200 : (typeof window !== 'undefined') ? (window.innerWidth/2) - ((window.innerWidth *0.90) /2) : '10%',
+// top: (typeof window !== 'undefined') && window.innerWidth > 600 ? (window.innerHeight) * 0.70 : '70%',
 zIndex: 1000,
 padding: '5 5 5 5',
 }}>
-              <Icon style={{ float: 'right', margin: '5 5 5 5 ' }} name="cancel" size="large" onClick={this.handlePortalClose} />
-              <p style={{ color: '#243746' , fontFamily: 'oldGrowth' }}>stay in touch</p>
+
+              <div style={{ textAlign: 'center' }}>
+                <Icon style={{ align: 'center' }} name="pointing up" size="big" circular />
+              </div><Icon style={{ float: 'right', margin: '5 5 5 5 ' }} name="cancel" size="large" onClick={this.handlePortalClose} />
+              <p style={{ color: '#243746', fontFamily: 'oldGrowth' }}>stay in touch</p>
               <span style={{ fontFamily: 'Arial', color: '#243746' }}>
                 <p>Subscribe to our mailing list for important annoucements,
-                upcoming events, and random musings.
-                </p>
+              upcoming events, and random musings.
+              </p>
               </span>
-              <div style={{ textAlign: 'center' }}>
-                <Icon style={{ align: 'center' }} name="pointing down" size="big" circular />
-              </div>
+
             </Segment>
 
-          </TransitionablePortal>
-        </Grid.Column>
-        <GridColumn textAlign="center" >
-        <Segment basic padded style={{ padding: '20px 20px 100px 20px'}}>
-          <CustomForm />
-          </Segment>
+          </Transition>
+          </div>
         </GridColumn>
-
+</Grid.Row>
       </Grid>,
     ]
   }
